@@ -39,12 +39,12 @@ export class TableCreator {
   async createContracts() {
     await this.client.query(`CREATE TABLE IF NOT EXISTS contracts (
     ID SERIAL PRIMARY KEY,
-    carId integer REFERENCES cars,
-    rateId integer REFERENCES rates,
-    userId integer REFERENCES users,
-    startDate date,
-    endDate date,
-    price integer
+    car_id integer REFERENCES cars,
+    rate_id integer REFERENCES rates,
+    user_id integer REFERENCES users,
+    start_date date,
+    end_date date,
+    min_price integer
     )
  `);
   }
